@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bounded Tool-Calling Agent</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;padding:20px;background:#101c2f;color:#e8f2ff}h1{color:#8ee7d1}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#182c46;padding:24px;border-radius:12px;line-height:1.5}.cards{display:flex;flex-wrap:wrap;gap:15px}.card{padding:20px;background:#213953;border-radius:10px;min-width:160px}b{display:block;font-size:26px;margin-top:10px}</style><h1>Bounded Tool-Calling Agent</h1><p>Reproducible educational experiment. See README and model card for scope and limitations.</p><div class="cards"><div class="card">tools used<b>2</b></div><div class="card">budget<b>4</b></div></div><h2>Complete results</h2><pre>{
+  &quot;project&quot;: &quot;Bounded Tool-Calling Agent&quot;,
+  &quot;mode&quot;: &quot;fixture&quot;,
+  &quot;task&quot;: &quot;Find the refund policy and calculate 125 times 3 plus 20.&quot;,
+  &quot;trace&quot;: [
+    {
+      &quot;call&quot;: {
+        &quot;tool&quot;: &quot;search&quot;,
+        &quot;argument&quot;: &quot;refund policy&quot;
+      },
+      &quot;observation&quot;: [
+        {
+          &quot;id&quot;: &quot;refund-policy:0&quot;,
+          &quot;source&quot;: &quot;refund-policy&quot;,
+          &quot;text&quot;: &quot;Customers can request a refund within 30 days of purchase. The order number is required. Refund requests are reviewed by support. Approved refunds return to the original payment method. Digital service access ends after an approved full refund. Exceptions require&quot;,
+          &quot;tenant&quot;: &quot;public&quot;,
+          &quot;score&quot;: 2.267565964060408
+        },
+        {
+          &quot;id&quot;: &quot;refund-policy:32&quot;,
+          &quot;source&quot;: &quot;refund-policy&quot;,
+          &quot;text&quot;: &quot;ends after an approved full refund. Exceptions require a support review and are never guaranteed by an automated assistant.&quot;,
+          &quot;tenant&quot;: &quot;public&quot;,
+          &quot;score&quot;: 1.7641708963577944
+        }
+      ]
+    },
+    {
+      &quot;call&quot;: {
+        &quot;tool&quot;: &quot;calculator&quot;,
+        &quot;argument&quot;: &quot;125*3+20&quot;
+      },
+      &quot;observation&quot;: 395
+    }
+  ],
+  &quot;tools_used&quot;: 2,
+  &quot;budget&quot;: 4
+}</pre></html>

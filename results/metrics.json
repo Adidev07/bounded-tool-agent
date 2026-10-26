@@ -1,0 +1,38 @@
+{
+  "project": "Bounded Tool-Calling Agent",
+  "mode": "fixture",
+  "task": "Find the refund policy and calculate 125 times 3 plus 20.",
+  "trace": [
+    {
+      "call": {
+        "tool": "search",
+        "argument": "refund policy"
+      },
+      "observation": [
+        {
+          "id": "refund-policy:0",
+          "source": "refund-policy",
+          "text": "Customers can request a refund within 30 days of purchase. The order number is required. Refund requests are reviewed by support. Approved refunds return to the original payment method. Digital service access ends after an approved full refund. Exceptions require",
+          "tenant": "public",
+          "score": 2.267565964060408
+        },
+        {
+          "id": "refund-policy:32",
+          "source": "refund-policy",
+          "text": "ends after an approved full refund. Exceptions require a support review and are never guaranteed by an automated assistant.",
+          "tenant": "public",
+          "score": 1.7641708963577944
+        }
+      ]
+    },
+    {
+      "call": {
+        "tool": "calculator",
+        "argument": "125*3+20"
+      },
+      "observation": 395
+    }
+  ],
+  "tools_used": 2,
+  "budget": 4
+}
